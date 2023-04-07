@@ -1,0 +1,3 @@
+github.com/google/go-cmp v0.5.9 h1:O2Tfq5qg4qc4AmwVlvv0oLiVAGB7enBSJ2x2DqQFi38=
+github.com/rpunt/simplehttp v0.0.4 h1:hhLnA9SbrvH96PIyyeFjcJVhGv2yihOGHZVLZMMg9t0=
+github.com/rpunt/simplehttp v0.0.4/go.mod h1:KHgfgNC8c4Elcqg0Gvd+y58L9fzcEMWRtUOvVOeL9Jk=
