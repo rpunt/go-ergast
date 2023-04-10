@@ -52,12 +52,12 @@ type Result struct {
 	Position     string `json:"position"`
 	PositionText string `json:"positionText"`
 	Points       string `json:"points"`
-	Driver Driver
-	Constructor Constructor
-	Grid   string `json:"grid"`
-	Laps   string `json:"laps"`
-	Status string `json:"status"`
-	Time   struct {
+	Driver       Driver
+	Constructor  Constructor
+	Grid         string `json:"grid"`
+	Laps         string `json:"laps"`
+	Status       string `json:"status"`
+	Time         struct {
 		Millis string `json:"millis"`
 		Time   string `json:"time"`
 	} `json:"Time,omitempty"`
