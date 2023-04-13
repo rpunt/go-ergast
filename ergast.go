@@ -102,11 +102,9 @@ func RaceResult() (Race, error) {
 	raceResult := ErgastResults{}
 	jsonErr := json.Unmarshal([]byte(response.Body), &raceResult)
 	if jsonErr != nil {
-		log.Panic(jsonErr)
-		// log.Fatal((jsonErr))
+		return Race{}, jsonErr
 	}
 
-	// return raceResult.Races[0], nil
 	return raceResult.MRData.RaceTable.Races[0], nil
 }
 
