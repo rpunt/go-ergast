@@ -2,7 +2,6 @@ package ergast
 
 import (
 	"encoding/json"
-	"log"
 	"strconv"
 
 	"github.com/rpunt/simplehttp"
@@ -97,7 +96,7 @@ func RaceResult() (Race, error) {
 
 	response, err := client.Get("/current/last/results.json")
 	if err != nil {
-		log.Panicf("response error: %s", err)
+		return Race{}, err
 	}
 	raceResult := ErgastResults{}
 	jsonErr := json.Unmarshal([]byte(response.Body), &raceResult)
