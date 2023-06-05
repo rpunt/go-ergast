@@ -74,14 +74,14 @@ type Result struct {
 }
 
 type Driver struct {
-	DriverID        string `json:"driverId"`
-	PermanentNumber string `json:"permanentNumber"`
-	Code            string `json:"code"`
-	URL             string `json:"url"`
-	GivenName       string `json:"givenName"`
-	FamilyName      string `json:"familyName"`
-	DateOfBirth     string `json:"dateOfBirth"`
-	Nationality     string `json:"nationality"`
+	DriverID        string `json:"driverId"`        // "max_verstappen"
+	PermanentNumber string `json:"permanentNumber"` // "33"
+	Code            string `json:"code"`            // "VER"
+	URL             string `json:"url"`             // "http://en.wikipedia.org/..."
+	GivenName       string `json:"givenName"`       // "Max"
+	FamilyName      string `json:"familyName"`      // "Verstappen"
+	DateOfBirth     string `json:"dateOfBirth"`     // "1997-09-30"
+	Nationality     string `json:"nationality"`     // "Dutch"
 }
 
 type Constructor struct {
