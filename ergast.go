@@ -9,40 +9,40 @@ import (
 
 type ErgastResults struct {
 	MRData struct {
-		Xmlns     string `json:"xmlns"`
-		Series    string `json:"series"`
-		URL       string `json:"url"`
-		Limit     string `json:"limit"`
-		Offset    string `json:"offset"`
-		Total     string `json:"total"`
+		Xmlns     string `json:"xmlns"`  // "http://ergast.com/mrd/1.5"
+		Series    string `json:"series"` // "f1"
+		URL       string `json:"url"`    // "http://ergast.com/api/f1/current/last/results.json"
+		Limit     string `json:"limit"`  // "30"
+		Offset    string `json:"offset"` // "0"
+		Total     string `json:"total"`  // "20"
 		RaceTable struct {
-			Season string `json:"season"`
-			Round  string `json:"round"`
+			Season string `json:"season"` // "2023"
+			Round  string `json:"round"`  // "3"
 			Races  []Race
 		}
 	}
 }
 
 type Race struct {
-	Season   string `json:"season"`
-	Round    string `json:"round"`
-	URL      string `json:"url"`
-	RaceName string `json:"raceName"`
+	Season   string `json:"season"`   // "2023"
+	Round    string `json:"round"`    // "3"
+	URL      string `json:"url"`      // "https://en.wikipedia.org/..."
+	RaceName string `json:"raceName"` // "Australian Grand Prix"
 	Circuit  Circuit
-	Date     string `json:"date"`
-	Time     string `json:"time"`
+	Date     string `json:"date"` // "2023-04-02"
+	Time     string `json:"time"` // "05:00:00Z"
 	Results  []Result
 }
 
 type Circuit struct {
-	CircuitID   string `json:"circuitId"`
-	URL         string `json:"url"`
-	CircuitName string `json:"circuitName"`
+	CircuitID   string `json:"circuitId"`   // "albert_park",
+	URL         string `json:"url"`         // "http://en.wikipedia.org/...",
+	CircuitName string `json:"circuitName"` // "Albert Park Grand Prix Circuit"
 	Location    struct {
-		Lat      string `json:"lat"`
-		Long     string `json:"long"`
-		Locality string `json:"locality"`
-		Country  string `json:"country"`
+		Lat      string `json:"lat"`      // "-37.8497"
+		Long     string `json:"long"`     // "144.968"
+		Locality string `json:"locality"` // "Melbourne"
+		Country  string `json:"country"`  // "Australia"
 	} `json:"Location"`
 }
 
@@ -85,10 +85,10 @@ type Driver struct {
 }
 
 type Constructor struct {
-	ConstructorID string `json:"constructorId"`
-	URL           string `json:"url"`
-	Name          string `json:"name"`
-	Nationality   string `json:"nationality"`
+	ConstructorID string `json:"constructorId"` // "constructorId": "red_bull",
+	URL           string `json:"url"`           // "url": "http://en.wikipedia.org/wiki/Red_Bull_Racing",
+	Name          string `json:"name"`          // "name": "Red Bull",
+	Nationality   string `json:"nationality"`   // "nationality": "Austrian"
 }
 
 func RaceResult() (Race, error) {
