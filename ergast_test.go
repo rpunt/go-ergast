@@ -19,19 +19,11 @@ func TestDriverByPosition(t *testing.T) {
 	response := ReadTestData("test_data/verstappen_wins.json")
 	race := response.MRData.RaceTable.Races[0]
 
-	position := 3
-	want := "ALO"
+	position := 18
+	want := "RUS"
 	if got, _ := race.DriverByPosition(position); got.Code != want {
 		t.Errorf(`DriverByPosition(%v) = %q, want "%v"`, position, got.Code, want)
 	}
-
-	// only driver positions 1-3 are returned in this API endpoint
-	// test bounds checking
-	// for position := 0; position < 5; position += 4 {
-	// 	if _, err := race.DriverByPosition(position); err == nil {
-	// 		t.Errorf(`DriverByPosition(%v) == nil, expected bounds-checking error`, position)
-	// 	}
-	// }
 }
 
 func TestResultParsing(t *testing.T) {
